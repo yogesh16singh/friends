@@ -13,7 +13,7 @@ const Register = () => {
     e.preventDefault();
     const interestsArray = interests.split(',').map((interest) => interest.trim());
     try {
-      const response = await axios.post('http://localhost:8000/users/signup', {
+      const response = await axios.post('https://friends-979v.onrender.com/users/signup', {
         username,
         password,
         interests: interestsArray,

@@ -19,7 +19,7 @@ const MainPage = () => {
     }
 
     axios
-      .get('http://localhost:8000/friends/home', {
+      .get('https://friends-979v.onrender.com/friends/home', {
         headers: {
           'Authorization': `Bearer ${token}`,
         },
@@ -33,7 +33,7 @@ const MainPage = () => {
       });
 
     axios
-      .get('http://localhost:8000/friends/recommend-friends', {
+      .get('https://friends-979v.onrender.com/friends/recommend-friends', {
         headers: {
           'Authorization': `Bearer ${token}`,
         },
@@ -52,7 +52,7 @@ const MainPage = () => {
     setSearchQuery(query);
     
     axios
-      .get(`http://localhost:8000/friends/search?query=${query}`, {
+      .get(`https://friends-979v.onrender.com/friends/search?query=${query}`, {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`,
         },
@@ -80,7 +80,7 @@ const MainPage = () => {
     const token = localStorage.getItem('token');
     
     axios
-      .post('http://localhost:8000/friends/send-request', 
+      .post('https://friends-979v.onrender.com/friends/send-request', 
         { receiverId }, 
         {
           headers: {

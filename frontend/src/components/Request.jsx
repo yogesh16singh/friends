@@ -8,7 +8,7 @@ const Request = () => {
 
   const fetchSentRequests = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/friends/sent-requests', {
+      const response = await axios.get('https://friends-979v.onrender.com/friends/sent-requests', {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
@@ -21,7 +21,7 @@ const Request = () => {
 
   const fetchReceivedRequests = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/friends/received-requests', {
+      const response = await axios.get('https://friends-979v.onrender.com/friends/received-requests', {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
         },
@@ -35,7 +35,7 @@ const Request = () => {
   const manageRequest = async (friendRequestId, action) => {
     try {
       const response = await axios.post(
-        'http://localhost:8000/friends/manage-request',
+        'https://friends-979v.onrender.com/friends/manage-request',
         { friendRequestId, action },
         {
           headers: {
