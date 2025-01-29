@@ -1,5 +1,5 @@
 import React from 'react'
-import Friend from './Friends.jpg'
+import Friend from './bg.jpg'
 import { Link } from 'react-router-dom'
 
 const Home = () => {
